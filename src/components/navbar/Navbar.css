@@ -1,0 +1,142 @@
+.NavbarItems {
+    background-color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1.2em;
+    height: 100px;
+}
+
+.navbar-logo {
+    color:white;
+    justify-self: start;
+    cursor:pointer;
+    margin-left:1em;
+}
+
+.fa-react {
+    margin-left : 0.5em;
+    }
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 3em;
+    list-style: none;
+    text-align:center;
+    width:75vw;
+    justify-content:end;
+    margin-right: 2em;
+}
+
+.nav-links {
+    font-family: 'neontubes';
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+.nav-links:hover {
+     color: deeppink;
+}
+
+.fa-bars {
+    color:white;
+}
+
+.nav-links-mobile {
+    display:none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .NavbarItems {
+        position: inherit;
+    }
+
+    .nav-menu {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        height: 1vm;
+        position: absolute;
+        opacity:0;
+        left:-100%;
+        top: 100px;
+        padding-bottom: 130px;
+        padding-top: 20px;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background: black;
+        left:0;
+        opacity:1;
+        transition: all 0.5s ease;
+        z-index:2;
+    }
+
+    .nav-links {
+        text-align:center;
+        padding: 1.5rem;
+        width:100%;
+        display:table;
+    }
+
+    .nav-links:hover {
+        background-color: black;
+        border-radius:0;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top:0.5em;
+        left:0;
+        transform: translate(25%, 50%);
+    }
+
+    .menu-icon {
+        display:block;
+        position: absolute;
+        top:0.2em;
+        right: 1em;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .fa-times {
+        color:white;
+        font-size: 2rem;
+    }
+
+    .nav-links-mobile {
+        font-family: 'neontubes';
+        display: block;
+        text-align: center;
+        align-content: center;
+        color: deeppink;
+        transition: all 0.5s ease;
+        text-shadow: 0 0 0 transparent, 0 0 1px #ff003c, 0 0 2px rgba(255, 0, 60, 0.5), 0 0 10px #ff003c, 0 0 15px #ff003c, 0 0 20px #ff003c;
+        -webkit-animation: blink 4s infinite alternate;
+        animation: blink 4s infinite alternate;
+        text-decoration: none;
+        border: 2px solid deeppink;
+        background: white;
+        border-radius: 25px;
+        width: 50%;
+        margin: auto;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+
+
+    .non {
+        display: none;
+    }
+
+}
